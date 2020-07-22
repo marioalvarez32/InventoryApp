@@ -6,10 +6,8 @@ class App extends Component {
         super();
 
         this.state = {
-            value: "hellow"
+            value: "Mario",
         };
-
-
     }
 
     render() {
