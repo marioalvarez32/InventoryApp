@@ -6,7 +6,7 @@ class App extends Component {
         super();
 
         this.state = {
-            value: "Luigi",
+            value: "Mario or Komi",
         };
     }
 
