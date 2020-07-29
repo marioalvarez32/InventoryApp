@@ -11,7 +11,15 @@ class TodoApp extends Component {
   }
 
   remove = (id) => {
-    console.log(id);
+    const { items } = this.state;
+
+    const newItems = items.filter((item) => {
+      return item.id !== id;
+    });
+
+    this.setState({
+      items: newItems,
+    });
   };
 
   handleChange = (e) => {
@@ -19,12 +27,13 @@ class TodoApp extends Component {
   };
 
   handleSubmit = (e) => {
+    const { text } = this.state;
     e.preventDefault();
-    if (this.state.text.length === 0) {
+    if (text.length === 0) {
       return;
     }
     const newItem = {
-      text: this.state.text,
+      text,
       id: Date.now(),
     };
     this.setState((state) => ({
@@ -34,14 +43,16 @@ class TodoApp extends Component {
   };
 
   render() {
+    const { text, items } = this.state;
     return (
       <div>
         <h3>TODO</h3>
-        <TodoList items={this.state.items} remove={this.remove} />
+        <TodoList items={items} remove={this.remove} />
         <form onSubmit={this.handleSubmit}>
+          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label htmlFor="new-todo">What needs to be done?</label>
-          <input id="new-todo" onChange={this.handleChange} value={this.state.text} />
-          <button>Add #{this.state.items.length + 1}</button>
+          <input id="new-todo" onChange={this.handleChange} value={text} />
+          <button type="submit">Add #{items.length + 1}</button>
         </form>
       </div>
     );

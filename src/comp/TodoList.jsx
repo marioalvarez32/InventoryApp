@@ -2,12 +2,20 @@ import React, { Component } from 'react';
 
 class TodoList extends Component {
   render() {
+    const { items } = this.props;
     return (
       <ul>
-        {this.props.items.map((item) => (
-          <li key={item.id} onClick={this.props.remove(item.id)}>
+        {items.map((item) => (
+          <div
+            key={item.id}
+            onClick={() => {
+              console.log('GOT HERE');
+              this.props.remove(item.id);
+              console.log('ONCLICK: ', item);
+            }}
+          >
             {item.text}
-          </li>
+          </div>
         ))}
       </ul>
     );
