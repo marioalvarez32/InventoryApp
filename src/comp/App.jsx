@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TodoApp from './TodoApp';
+import TodoApp from './TodoApp.jsx';
 
 class App extends Component {
   constructor() {
@@ -11,6 +11,7 @@ class App extends Component {
     // };
   }
 
+  stuff = () => {};
   render() {
     // const { value, login } = this.state;
 

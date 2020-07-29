@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
-import TodoList from './TodoList';
+import TodoList from './TodoList.jsx';
 
 class TodoApp extends Component {
   constructor(props) {
     super(props);
-    this.state = { items: [], text: '' };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.remove = this.remove.bind(this);
+    this.state = {
+      items: [],
+      text: '',
+    };
   }
 
-  remove(id) {
+  remove = (id) => {
     console.log(id);
-  }
+  };
 
-  handleChange(e) {
+  handleChange = (e) => {
     this.setState({ text: e.target.value });
-  }
+  };
 
-  handleSubmit(e) {
+  handleSubmit = (e) => {
     e.preventDefault();
     if (this.state.text.length === 0) {
       return;
@@ -31,7 +31,7 @@ class TodoApp extends Component {
       items: state.items.concat(newItem),
       text: '',
     }));
-  }
+  };
 
   render() {
     return (
