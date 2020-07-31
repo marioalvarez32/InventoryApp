@@ -10,13 +10,15 @@ export class Signin extends Component {
   constructor() {
     super();
     this.state = {
-      password: '',
-      userName: '',
+      username: '',
     };
   }
 
   myChangeHandler = (e) => {
-    console.log(e.target.value);
+    const { username } = this.state;
+    this.setState({
+      [username]: e.target.value,
+    });
   };
 
   handleSubmit = (e) => {
