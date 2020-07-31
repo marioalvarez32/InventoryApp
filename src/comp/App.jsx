@@ -1,27 +1,17 @@
 import React, { Component } from 'react';
-import TodoApp from './TodoApp.jsx';
+import SignIn from './Signin.jsx';
 
 class App extends Component {
+  // eslint-disable-next-line no-useless-constructor
   constructor() {
     super();
-
-    // this.state = {
-    //   value: 'Mario or Komi',
-    //   login: 'test',
-    // };
   }
 
-  stuff = () => {};
   render() {
-    // const { value, login } = this.state;
-
     return (
-      <TodoApp />
-      // <div className="home">
-      //   <h1>Hello World </h1>
-      //   <h1>{value}</h1>
-      //   <div>{login}</div>
-      // </div>
+      <div>
+        <SignIn />
+      </div>
     );
   }
 }
