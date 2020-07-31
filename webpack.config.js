@@ -50,6 +50,9 @@ module.exports = {
       filename: './index.html',
     }),
   ],
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   devServer: {
     host: 'localhost',
     port: port,
