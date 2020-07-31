@@ -19,6 +19,9 @@ export class Signin extends Component {
     this.setState({
       [username]: e.target.value,
     });
+
+    // eslint-disable-next-line no-console
+    console.log(e.target.value);
   };
 
   handleSubmit = (e) => {

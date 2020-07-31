@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SignIn from './Signin.jsx';
+import SignIn from './Signin';
 
 class App extends Component {
   // eslint-disable-next-line no-useless-constructor
