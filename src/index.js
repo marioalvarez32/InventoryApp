@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './comp/App';
+import AppController from './comp/AppController';
 
 // eslint-disable-next-line no-undef
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<AppController />, document.getElementById('root'));
