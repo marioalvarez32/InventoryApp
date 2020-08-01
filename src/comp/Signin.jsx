@@ -11,8 +11,21 @@ export class Signin extends Component {
     super();
     this.state = {
       username: '',
+      password: '',
     };
   }
+
+  // Method to handle the submission of the form
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // method to handle the changes in the form
 
   myChangeHandler = (e) => {
     const { username } = this.state;
@@ -24,13 +37,14 @@ export class Signin extends Component {
     console.log(e.target.value);
   };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
+  // Method to reset form after submission
 
+  resetForm() {
     this.setState({
-      [e.target.name]: e.target.value,
+      password: '',
+      username: '',
     });
-  };
+  }
 
   render() {
     return (
