@@ -3,12 +3,12 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-
+import './Styles/signIn.css';
 import Container from '@material-ui/core/Container';
 
 export class Signin extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       username: '',
       password: '',
@@ -18,23 +18,23 @@ export class Signin extends Component {
   // Method to handle the submission of the form
 
   handleSubmit = (e) => {
+    // const { username, password } = this.state;
     e.preventDefault();
 
     this.setState({
       [e.target.name]: e.target.value,
     });
+    // eslint-disable-next-line no-console
+    console.log(this.state);
   };
 
   // method to handle the changes in the form
 
   myChangeHandler = (e) => {
-    const { username } = this.state;
+    // const { username, password } = this.state;
     this.setState({
-      [username]: e.target.value,
+      [e.target.name]: e.target.value,
     });
-
-    // eslint-disable-next-line no-console
-    console.log(e.target.value);
   };
 
   // Method to reset form after submission
@@ -47,10 +47,11 @@ export class Signin extends Component {
   }
 
   render() {
+    const { username, password } = this.state;
     return (
       <Container component="main" maxWidth="xs">
         <Avatar style={{ marginLeft: '170px', backgroundColor: 'blue', marginTop: '300px' }} />
-        <Typography component="h1" variant="h5" style={{ textAlign: 'center', marginTop: '10px' }}>
+        <Typography component="h1" variant="h5" className="sign-avatar">
           Sign in
         </Typography>
         <form onSubmit={this.handleSubmit}>
@@ -59,23 +60,25 @@ export class Signin extends Component {
             margin="normal"
             required
             fullWidth
+            value={username}
             id="email"
             label="Email Address"
-            name="email"
+            name="username"
             autoComplete="email"
             autoFocus
-            onChange={this.myChangeHandler}
+            onChange={(e) => this.myChangeHandler(e)}
           />
           <TextField
             variant="outlined"
             margin="normal"
             required
             fullWidth
+            value={password}
             name="password"
             label="Password"
             type="password"
             id="password"
-            onChange={this.myChangeHandler}
+            onChange={(e) => this.myChangeHandler(e)}
             autoComplete="current-password"
           />
           {/* <FormControlLabel
@@ -88,6 +91,9 @@ export class Signin extends Component {
             variant="contained"
             color="primary"
             style={{ marginTop: '10px' }}
+            onSubmit={(e) => {
+              this.handleSubmit(e);
+            }}
           >
             Sign In
           </Button>
