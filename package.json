@@ -39,12 +39,14 @@
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "css-loader": "^4.2.0"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "css-loader": "^4.2.0",
     "react": "^16.13.1",
+    "react-base-table": "^1.10.7",
     "react-dom": "^16.13.1"
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SignIn from './Signin';
+import SellerPage from './pages/sellerpage/SellerPage';
 
 class App extends Component {
   // eslint-disable-next-line no-useless-constructor
@@ -9,8 +9,8 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <SignIn />
+      <div className="full-height">
+        <SellerPage />
       </div>
     );
   }

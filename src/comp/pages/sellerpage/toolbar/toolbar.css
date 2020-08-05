@@ -1,0 +1,23 @@
+.toolbar {
+  background-color: #bbbbbb;
+  padding: 5px;
+}
+.toolbar__container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.toolbar__controls {
+  flex-basis: 5%;
+}
+.toolbar__title {
+  flex-basis: 25%;
+  font-size: 40px;
+  font-family: 'Sora';
+  font-weight: 800;
+}
+.toolbar__tools {
+  flex-basis: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
