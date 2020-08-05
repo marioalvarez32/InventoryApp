@@ -1,0 +1,19 @@
+.cart {
+  height: 100%;
+  width: 100%;
+  background-color: #eeeeee;
+}
+.cart__container {
+  width: 100%;
+  height: 100%;
+}
+
+.cart__table-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.cart__table-wrapper .BaseTable {
+  width: 100%;
+  height: 100%;
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SellerPage from './pages/SellerPage';
+import SellerPage from './pages/sellerpage/SellerPage';
 
 class App extends Component {
   // eslint-disable-next-line no-useless-constructor
