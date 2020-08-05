@@ -4,3 +4,20 @@
   background-color: cadetblue;
   margin-bottom: auto;
 }
+
+.sign-in__container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100%;
+}
+.sign-in {
+  height: 100%;
+}
+
+.sign-in__avatar {
+}
+
+.sign-in__container .MuiFormLabel-root {
+  color: red;
+}
