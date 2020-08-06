@@ -16,7 +16,6 @@ export class Signin extends Component {
   }
 
   // Method to handle the submission of the form
-
   handleSubmit = (e) => {
     // const { username, password } = this.state;
     e.preventDefault();
@@ -49,56 +48,60 @@ export class Signin extends Component {
   render() {
     const { username, password } = this.state;
     return (
-      <Container component="main" maxWidth="xs">
-        <Avatar className="sign-avatar" />
-        <Typography component="h1" variant="h5" className="sign-topography">
-          Sign in
-        </Typography>
-        <form onSubmit={this.handleSubmit}>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            value={username}
-            id="email"
-            label="Email Address"
-            name="username"
-            autoComplete="email"
-            autoFocus
-            onChange={(e) => this.myChangeHandler(e)}
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            value={password}
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-            onChange={(e) => this.myChangeHandler(e)}
-            autoComplete="current-password"
-          />
-          {/* <FormControlLabel
+      <div className="sign-in">
+        <div className="sign-in__container">
+          <Container component="main" maxWidth="xs">
+            <Avatar className="sign-in__avatar" />
+            <Typography component="h1" variant="h5" className="sign-avatar">
+              Sign in
+            </Typography>
+            <form onSubmit={this.handleSubmit}>
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                value={username}
+                id="email"
+                label="Email Address"
+                name="username"
+                autoComplete="email"
+                autoFocus
+                onChange={(e) => this.myChangeHandler(e)}
+              />
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                value={password}
+                name="password"
+                label="Password"
+                type="password"
+                id="password"
+                onChange={(e) => this.myChangeHandler(e)}
+                autoComplete="current-password"
+              />
+              {/* <FormControlLabel
           control={<Checkbox value="remember" color="primary" />}
           label="Remember me"
         /> */}
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            style={{ marginTop: '10px' }}
-            onSubmit={(e) => {
-              this.handleSubmit(e);
-            }}
-          >
-            Sign In
-          </Button>
-        </form>
-      </Container>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+                style={{ marginTop: '10px' }}
+                onSubmit={(e) => {
+                  this.handleSubmit(e);
+                }}
+              >
+                Sign In
+              </Button>
+            </form>
+          </Container>
+        </div>
+      </div>
     );
   }
 }

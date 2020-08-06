@@ -8,3 +8,20 @@
   margin-top: '300px';
   margin-left: '170px';
 }
+
+.sign-in__container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100%;
+}
+.sign-in {
+  height: 100%;
+}
+
+.sign-in__avatar {
+}
+
+.sign-in__container .MuiFormLabel-root {
+  color: red;
+}
