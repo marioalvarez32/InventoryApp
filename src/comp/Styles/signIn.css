@@ -1,6 +1,10 @@
-.sign-avatar {
+.sign-topography {
   text-align: center;
-  margin-top: '10px';
-  background-color: cadetblue;
-  margin-bottom: auto;
+}
+
+.sign-avatar {
+  margin-right: '170px';
+  background-color: blue;
+  margin-top: '300px';
+  margin-left: '170px';
 }

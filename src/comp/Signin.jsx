@@ -50,8 +50,8 @@ export class Signin extends Component {
     const { username, password } = this.state;
     return (
       <Container component="main" maxWidth="xs">
-        <Avatar style={{ marginLeft: '170px', backgroundColor: 'blue', marginTop: '300px' }} />
-        <Typography component="h1" variant="h5" className="sign-avatar">
+        <Avatar className="sign-avatar" />
+        <Typography component="h1" variant="h5" className="sign-topography">
           Sign in
         </Typography>
         <form onSubmit={this.handleSubmit}>
