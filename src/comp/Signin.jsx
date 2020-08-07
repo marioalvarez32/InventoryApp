@@ -18,6 +18,7 @@ export class Signin extends Component {
       //   password: 'seller1',
       //   error: '',
       // },
+      loggedIn: false,
     };
   }
 
@@ -33,7 +34,10 @@ export class Signin extends Component {
       password: 'seller1',
     };
     if (username === hardcodedCred.username && password === hardcodedCred.password) {
-      <Redirect to="/SellerPage" />;
+      console.log('HERE');
+      this.setState({
+        loggedIn: true,
+      });
       // eslint-disable-next-line no-console
       console.log(password);
     }
@@ -58,9 +62,10 @@ export class Signin extends Component {
   }
 
   render() {
-    const { username, password } = this.state;
+    const { username, password, loggedIn } = this.state;
     return (
       <div className="sign-in">
+        {loggedIn ? <Redirect to="/seller" /> : ''}
         <div className="sign-in__container">
           <div className="sign-in__box">
             <Container component="main" maxWidth="xs">
