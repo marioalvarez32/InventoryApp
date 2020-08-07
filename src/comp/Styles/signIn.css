@@ -1,27 +1,43 @@
 .sign-topography {
-  text-align: center;
+  justify-content: center;
 }
 
 .sign-avatar {
   margin-right: '170px';
-  background-color: blue;
   margin-top: '300px';
-  margin-left: '170px';
+  text-align: center;
+  justify-content: center;
 }
 
 .sign-in__container {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   height: 100%;
+  background-color: lightblue;
+}
+.MuiTypography-root {
+  align-items: center;
+  color: black;
+  justify-content: center;
+  display: flex;
+  margin-left: 50%;
 }
 .sign-in {
   height: 100%;
 }
-
+.sign-in__container .sign-in__box {
+  box-sizing: border-box;
+  box-shadow: 0 0 10px;
+  height: 400px;
+  padding-top: 20px;
+  background-color: white;
+}
 .sign-in__avatar {
+  display: flex;
+  justify-content: center;
 }
 
-.sign-in__container .MuiFormLabel-root {
-  color: red;
+.sign-in__container .MuiContainer-root {
+  justify-content: center;
 }

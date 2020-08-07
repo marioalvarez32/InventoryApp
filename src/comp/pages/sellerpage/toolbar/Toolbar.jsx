@@ -14,11 +14,11 @@ class Toolbar extends React.Component {
     return (
       <div className="toolbar">
         <div className="toolbar__container">
-          <div className="toolbar__controls"></div>
+          <div className="toolbar__controls" />
           <div className="toolbar__title">Seller Page</div>
           <div className="toolbar__tools">
-            <div></div>
-            <div></div>
+            <div />
+            <div />
             <TextField id="item-search" type="string" label="Search" variant="outlined" />
           </div>
         </div>

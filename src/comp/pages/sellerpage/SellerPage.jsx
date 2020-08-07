@@ -6,8 +6,8 @@ import Cart from './cart/Cart';
 import Summary from './summary/Summary';
 
 class SellerPage extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
   }
 
   render() {

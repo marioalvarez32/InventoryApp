@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import SignIn from './Signin';
 import SellerPage from './pages/sellerpage/SellerPage';
-import Signin from './Signin';
 
 class App extends Component {
   // eslint-disable-next-line no-useless-constructor
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
       <div className="full-height">
-        <Signin />
+        <BrowserRouter>
+          <Route path="/" component={SignIn} />
+          <Route exact path="/SellerPage" component={SellerPage} />
+        </BrowserRouter>
       </div>
     );
   }
