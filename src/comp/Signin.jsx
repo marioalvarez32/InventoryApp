@@ -30,7 +30,6 @@ export class Signin extends Component {
       password: 'seller1',
     };
     if (username === hardcodedCred.username && password === hardcodedCred.password) {
-      console.log('HERE');
       this.setState({
         loggedIn: true,
       });
@@ -46,9 +45,6 @@ export class Signin extends Component {
     }
   };
 
-  // Method to reset form
-  resetForm = () => {};
-
   // method to handle the changes in the form
 
   myChangeHandler = (e) => {
@@ -60,12 +56,12 @@ export class Signin extends Component {
 
   // Method to reset form after submission
 
-  resetForm() {
-    this.setState({
-      password: '',
-      username: '',
-    });
-  }
+  // resetForm() {
+  //   this.setState({
+  //     password: '',
+  //     username: '',
+  //   });
+  // }
 
   render() {
     const { username, password, loggedIn, errorLogin } = this.state;
