@@ -13,10 +13,10 @@ class App extends Component {
     return (
       <div className="full-height">
         <Switch>
-          <Route path="/login">
+          <Route exact path="/login">
             <SignIn />
           </Route>
-          <Route path="/seller">
+          <Route exact path="/seller">
             <SellerPage />
           </Route>
 
@@ -27,7 +27,7 @@ class App extends Component {
             the URL because all URLs begin with a /. So that's
             why we put this one last of all */}
           <Route path="/">
-            <SellerPage />
+            <SignIn />
           </Route>
         </Switch>
       </div>

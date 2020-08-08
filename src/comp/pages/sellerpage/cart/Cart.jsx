@@ -3,6 +3,7 @@ import BaseTable, { Column } from 'react-base-table';
 
 import 'react-base-table/styles.css';
 import './cart.css';
+
 class Cart extends React.Component {
   constructor(props) {
     super(props);

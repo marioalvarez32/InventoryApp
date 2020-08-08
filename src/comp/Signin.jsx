@@ -13,12 +13,8 @@ export class Signin extends Component {
     this.state = {
       username: '',
       password: '',
-      // userSeller: {
-      //   username: 'seller',
-      //   password: 'seller1',
-      //   error: '',
-      // },
       loggedIn: false,
+      errorLogin: false,
     };
   }
 
@@ -40,8 +36,18 @@ export class Signin extends Component {
       });
       // eslint-disable-next-line no-console
       console.log(password);
+    } else {
+      // eslint-disable-next-line no-console
+      console.log('Error Here');
+      this.error = true;
+      this.setState({ username: '', password: '', errorLogin: true }, () => {
+        setTimeout(() => this.setState({ errorLogin: false }), 2000);
+      });
     }
   };
+
+  // Method to reset form
+  resetForm = () => {};
 
   // method to handle the changes in the form
 
@@ -62,7 +68,7 @@ export class Signin extends Component {
   }
 
   render() {
-    const { username, password, loggedIn } = this.state;
+    const { username, password, loggedIn, errorLogin } = this.state;
     return (
       <div className="sign-in">
         {loggedIn ? <Redirect to="/seller" /> : ''}
@@ -77,26 +83,28 @@ export class Signin extends Component {
               </Typography>
               <form onSubmit={this.handleSubmit}>
                 <TextField
+                  error={errorLogin}
                   variant="outlined"
                   margin="normal"
                   required
                   fullWidth
                   value={username}
                   id="email"
-                  label="Email Address"
+                  label={errorLogin ? 'Wrong Email Address' : 'Email Address'}
                   name="username"
                   autoComplete="email"
                   autoFocus
                   onChange={(e) => this.myChangeHandler(e)}
                 />
                 <TextField
+                  error={errorLogin}
                   variant="outlined"
                   margin="normal"
                   required
                   fullWidth
                   value={password}
                   name="password"
-                  label="Password"
+                  label={errorLogin ? 'Wrong Password' : 'Password'}
                   type="password"
                   id="password"
                   onChange={(e) => this.myChangeHandler(e)}

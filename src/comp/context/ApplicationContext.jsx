@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 const context = React.createContext();
 const ContextConsumer = context.Consumer;
 const ContextProvider = context.Provider;
+
 class AppContext extends Component {
   constructor(props) {
     super(props);
